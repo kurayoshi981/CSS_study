@@ -1,67 +1,37 @@
 body {
     margin: 0;
     padding: 0;
-    background: #292929;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-
-.center {
+.box {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate( -50%, -50%)
+    width: 400px;
+    height: 400px;
+    background: #000;
 }
-
-input[type="checkbox"] {
-    position: relative;
-    width: 120px;
-    height: 40px;
-    -webkit-appearance: none;
-    background: linear-gradient(0deg, #333, #000);
-    outline: none;
-    border-radius:  20px;
-    box-shadow: 0 0 0 4px #3535, 0 0 0 5px, inset 0 0 10px rgba(0,0,0,1), 0 5px 20px rgba(0,0,0,.5), inset 0 0 15px rgba(0,0,0,.2);
-}
-input:checked[type="checkbox"] {
-    background: linear-gradient(0deg, #6dd1ff, #20b7ff);
-    box-shadow:0 0 2px, 0 0 0 4px #3535, 0 0 0 5px, inset 0 0 10px rgba(0,0,0,1), 0 5px 20px rgba(0,0,0,.5), inset 0 0 15px rgba(0,0,0,.2);
-
-}
-input[type="checkbox"]:before {
-    content: '';
+.content {
     position: absolute;
-    top:0 ;
+    top: 0;
     left: 0;
-    width: 80px;
-    height: 40px;
-    background: linear-gradient(0deg, #000, #6b6b6b);
-    border-radius: 20px;
-    box-shadow: 0 0 0 1px #232323;
-    transform: scale(.98, .96);
-    transition: .5s;
-}
-input:checked[type="checkbox"]:before {
-    left: 40px;
-}
-input[type="checkbox"]:after {
-    content: '';
-    position: absolute;
-    top: calc(50% - 2px) ;
-    left: 70px;
-    width: 4px;
-    height: 4px;
-    background: linear-gradient(0deg, #6b6b6b, #000);
-    border-radius: 50%;
-    transition: .5s;
-}
-input:checked[type="checkbox"]:after {
-    background: #63cdff;
-    left: 110px;
-    box-shadow: 0 0 5px #13b3ff, 0 0 15px #13b3ff;
-}
-
-.text {
-    position: absolute;
-    top:39%;
-    left: 47%;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    align-items: center;
     color: #fff;
+    padding: 20px;
+    font-family: consolas;
+    text-align: center;
+
+}
+.content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
 }
